@@ -1,3 +1,4 @@
+\RequirePackage{etex}
 \documentclass{ExpressiveResume}
 
 % ----- Resume -----
@@ -5,70 +6,123 @@
 
 % ----- Name + Contact Information -----
 \resumeheader[
-    firstname=John,
-    middleinitial=N,
-    lastname=Doe,
-    email=john.doe@example.com,
-    % phone=123-456-7890,
-    linkedin=johndoe,
-    github=johndoe,
-    % city=Town,
-    % state=State,
-    qrcode=./images/qr.png
+    firstname=Serhan,
+    lastname=Yilmaz,
+    email=srhnylmz14@gmail.com,
+    linkedin=yilmaz-serhan,
+    github=serhanylmz,
+    website=serhanyilmaz.org,
+    twitter=srhnylmz14
 ]
-
-\objective{A software engineering graduate with 2 years of work
-    experience at various internships seeking opportunities to develop
-    web/mobile applications for Company XYZ.}
-
-% ----- Work Experience -----
-\section{Work Experience}
-
-\experience{Radiant Software Systems}{%
-    \role{Software Engineer}{2021 - 2024}{
-        \achievement{
-
-            Developed a mobile app in \tech{React Native} that was
-            downloaded 100k times on Google Play.
-
-        }
-    }
-    \role{Summer Intern}{2021}{
-        \achievement{
-
-            Collaborated in an \tech{Agile/Scrum} team of 8 engineers to
-            deliver new features every 2 weeks.
-
-        }
-    }
-}
-
-% ----- Technical Projects -----
-\section{Technical Projects}
-
-\project{Expressive Resume}{2021-2024}{
-
-    \achievement{
-        Created a \tech{\LaTeX} class
-        that enables anyone to quickly
-        create a beautiful resume
-        and cover letter.
-    }
-
-}
 
 % ----- Education -----
 \section{Education}
 
-\degree{B.S. Software Engineering \honors{Summa Cum Laude}}{Super Duper University}{2022}{
-    \achievement{Ranked \#15 out of 463 students}
-}
+\degree{Computer Science — Bachelor of Science}{Sabanci University}{Sep 2021 - Jun 2025}{cGPA: 3.59/4}
+
+\achievement{Ranked top 0.02\% among 2.9 million students in the National University Entrance Exam}
+
+% ----- Publications -----
+\section{Publications}
+
+\begin{enumerate}[label={[\arabic*]}, leftmargin=25pt, itemsep=5pt]
+    \item \textbf{Serhan Yilmaz} and Kemal Oflazer, "CASCADES: Compound AI
+          Systems for Controlled And Diverse Question Generation," in
+          preparation, 2025.
+
+    \item Angelika Romanou, [...], \textbf{Serhan Yilmaz}, [...] Sara Hooker,
+          Antoine Bosselut, "INCLUDE: Evaluating Multilingual Language
+          Understanding with Regional Knowledge," \textbf{ICLR 2025 - Spotlight}.
+\end{enumerate}
+
+% ----- Work and Research Experience -----
+\section{Work and Research Experience}
+
+\firstexperienceline{Stealth Startup}{Founding Engineer}{Mar 2025 - Present}
+\achievement{Building AI-powered financial tools for enterprise — US-based stealth startup}
+\achievement{Leading \tech{agentic AI} development, building \tech{full-stack} web apps, and database \tech{ETL} processes}
+
+\experienceline{Carnegie Mellon University}{Research Internship}{Dec 2023 - Present}
+\achievement{Research internship with Professor Kemal Oflazer at Carnegie Mellon University on advanced question generation and multi-agent frameworks}
+\achievement{Developed a novel \tech{Compound AI system} utilizing multiple specialized language models in structured workflows for enhanced question generation}
+\achievement{Implemented sophisticated \tech{LLM-as-a-Judge} methodologies with Chain-of-Thought reasoning for semantic and structural assessment}
+\achievement{Designing iterative feedback loops in multi-agent collaboration frameworks, achieving over \tech{60\% improvement} over baseline generation methods}
+\achievement{Authored the CASCADES framework paper, introducing compound AI systems for controlled question generation through structured LLM orchestration and iterative refinement}
+
+\experienceline{Expedition Aya - Cohere for AI}{Research Contributor}{Aug 2024 - Oct 2024}
+\achievement{Co-authored INCLUDE, a multilingual benchmarking dataset for LLMs (ICLR 2025 submission)}
+\achievement{Built \tech{Python} pipelines using LLM and VLMs for automated extraction of multichoice questions from educational resources across diverse languages}
+\achievement{Involved in dataset curation with \tech{1000+ questions} and mentoring international contributors to increase diversity}
+
+\experienceline{TU Darmstadt}{Research Intern}{Jul 2024 - Sep 2024}
+\achievement{Developed a self-sustaining agentic chatbot system for psychological assessment of Ukrainian refugees under Prof. Iryna Gurevych}
+\achievement{Implemented complex decision-making pipelines for autonomous question planning, contextual understanding, and verdict generation}
+\achievement{Optimized the system for deployment at Charité Berlin, integrating cultural sensitivity parameters and robust assessment protocols}
+
+\experienceline{KTH Royal Institute of Technology}{Research Intern}{Jun 2024 - Sep 2024}
+\achievement{Working on improving voice activity prediction models under Prof. Gabriel Skantze to create conversational systems capable of human-like turn-taking dialogue}
+\achievement{Implemented key-value caching for real-time inference and experimented with attention sinks for higher accuracy while maintaining efficiency}
+\achievement{Implemented data augmentation techniques for audio processing, enhancing model robustness in real-world scenarios}
+\achievement{Successfully deployed enhanced models on \tech{Furhat Robotics'} humanoid robots, improving conversational turn-taking accuracy by \tech{93\%}}
+
+\experienceline{Yapi Kredi Technologies}{NLP R\&D Engineering Intern}{Oct 2023 - Apr 2024}
+\achievement{Enhanced document interpretation algorithms using OCR-free \tech{Donut Transformers}}
+\achievement{Fine-tuned language models, reducing annotation effort by \tech{40\%} through transfer learning}
+
+\experienceline{EPFL}{Summer@EPFL Intern}{Jun 2023 - Sep 2023}
+\achievement{Initiated Project Charisius, for developing robust, privacy-preserving Federated ML environments}
+\achievement{Optimized gradient aggregators, leveraging \tech{PyTorch} and \tech{CUDA} to achieve performance improvements of \tech{2200\%} compared to previous versions}
+\achievement{Published the Charisius library for accelerated Statistics and Federated ML applications, reducing runtime by up to \tech{96\%}}
+\achievement{Developed documentation website and Flask-backed benchmarking leaderboard for the project}
+
+\experienceline{Sabanci University}{Undergraduate Teaching Assistant}{Sep 2022 - Jan 2023}
+\achievement{Wrote homework assignments for students and held weekly recitation and office hours}
+
+\experienceline{Boston University}{Research Assistant}{Jun 2022 - Sep 2022}
+\achievement{Conducted research on Threat Modeling and Component Design for large-scale server systems under Prof. Rabia Tugce Yazicigil}
+\achievement{Developed a \tech{C++} tool providing \tech{336 combinations} to design secure servers for resource-intensive applications}
+
+\experienceline{Pharus Tech}{Intern}{Jul 2020 - Sep 2020}
+\achievement{Analyzed and visualized data from the ESCO dataset, with information on \tech{3008 occupations} and \tech{13890 skills}}
+\achievement{Developed data processing pipelines, improving data analysis efficiency by \tech{30\%}}
+
+% ----- Leadership Experience -----
+\section{Leadership Experience}
+
+\firstexperienceline{kAi Sabanci}{Founder \& President}{Mar 2023 - Present}
+\achievement{Founded and led Sabanci University's AI club, growing membership to \tech{600+} with \tech{80\% active participation}}
+\achievement{Organized \tech{17 events} in one term, with workshops on Gen AI, NLP, ML, and DL, serving as a voluntary TA}
+\achievement{Secured kAi Sabanci's position as a founding member of the \tech{NVIDIA Student Network}}
+\achievement{Facilitated high-profile visits, including hosting NVIDIA AI chief Simon See and organizing a visit to the Turkish Presidency's Digital Transformation Office}
+\achievement{Supervised \tech{6 major projects}, including ChatSU, and NeRF campus modeling}
+\achievement{Selected for the prestigious \tech{NVIDIA Student Spotlight} series for outstanding leadership and achievement}
 
 % ----- Awards -----
 \section{Awards}
 
-\award{Employee of the Month}{Radiant Software Systems}{2023}{
-    \achievement{Did some amazing stuff that really benefitted the company}
+\award{Sakip Sabanci Award for Outstanding Success}{Sabanci University}{Sep 2024}{
+    \achievement{Demonstrated academic excellence throughout the year. Awarded \tech{50\% tuition scholarship}}
 }
+
+\award{Sakip Sabanci Award for Outstanding Success}{Sabanci University}{Sep 2022}{
+    \achievement{Ranked top \tech{4\%} in class, demonstrating academic excellence. Awarded \tech{100\% tuition scholarship}}
+}
+
+\award{Innovation in Crisis Award}{The Royal Swedish Academy of Engineering Sciences}{May 2020}{
+    \achievement{Secured \tech{1st place} as part of team United in Crisis for innovative solutions during challenging times}
+}
+
+\award{Junior Academy Membership}{The New York Academy of Sciences}{Sep 2019}{
+    \achievement{Selected for "The Junior Academy" program with a highly competitive \tech{8\% acceptance rate}}
+}
+
+% ----- Skills -----
+\section{Skills}
+
+\skill{Languages \& Tools}{\tech{Python}, \tech{Docker}, \tech{Linux},
+    \tech{AWS}, \tech{GCP}, \tech{Git}, \tech{Javascript}, \tech{C},
+    \tech{C++}}
+
+\skill{Libraries \& Frameworks}{\tech{PyTorch}, \tech{Transformers}, \tech{LangChain}, \tech{OpenCV}, \tech{PostgreSQL}, \tech{React}}
 
 \end{document}
