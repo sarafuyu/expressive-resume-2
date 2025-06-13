@@ -22,6 +22,8 @@
     phone,  % Must be in XXX-XXX-XXXX format to become a valid link
     github,
     linkedin,
+    website,
+    twitter,
     city,  % Ignored if `state` is not also provided
     state,
     qrcode  % Path to an image of a 1000x1000px QR Code
@@ -36,7 +38,9 @@
                 \ifcommandkey{phone}{\contactseparator}%
                 {\ifcommandkey{github}{\contactseparator}%
                     {\ifcommandkey{linkedin}{\contactseparator}%
-                        {\ifcommandkey{state}{\contactseparator}{}}}}%
+                        {\ifcommandkey{twitter}{\contactseparator}%
+                            {\ifcommandkey{website}{\contactseparator}%
+                                {\ifcommandkey{state}{\contactseparator}{}}}}}}%
             }%
             {}%
             \ifcommandkey{phone}%
@@ -44,19 +48,38 @@
                 \phone{\commandkey{phone}}%
                 \ifcommandkey{github}{\contactseparator}%
                 {\ifcommandkey{linkedin}{\contactseparator}%
-                    {\ifcommandkey{state}{\contactseparator}{}}}%
+                    {\ifcommandkey{twitter}{\contactseparator}%
+                        {\ifcommandkey{website}{\contactseparator}%
+                            {\ifcommandkey{state}{\contactseparator}{}}}}}%
             }%
             {}%
             \ifcommandkey{github}%
             {%
                 \github{\commandkey{github}}%
                 \ifcommandkey{linkedin}{\contactseparator}%
-                {\ifcommandkey{state}{\contactseparator}{}}%
+                {\ifcommandkey{twitter}{\contactseparator}%
+                    {\ifcommandkey{website}{\contactseparator}%
+                        {\ifcommandkey{state}{\contactseparator}{}}}}%
             }%
             {}%
             \ifcommandkey{linkedin}%
             {%
                 \linkedin{\commandkey{linkedin}}%
+                \ifcommandkey{twitter}{\contactseparator}%
+                {\ifcommandkey{website}{\contactseparator}%
+                    {\ifcommandkey{state}{\contactseparator}{}}}%
+            }%
+            {}%
+            \ifcommandkey{twitter}%
+            {%
+                \twitter{\commandkey{twitter}}%
+                \ifcommandkey{website}{\contactseparator}%
+                {\ifcommandkey{state}{\contactseparator}{}}%
+            }%
+            {}%
+            \ifcommandkey{website}%
+            {%
+                \website{\commandkey{website}}%
                 \ifcommandkey{state}{\contactseparator}{}%
             }%
             {}%

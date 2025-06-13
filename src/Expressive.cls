@@ -69,7 +69,7 @@
 \titlespacing{\section}
 {0pt}  % `left`: Left Margin
 {0pt}  % `before-sep`: Vertical space before the title
-{\spacenormal}  % `after-sep`: Vertical space after the title
+{6pt}  % `after-sep`: Vertical space after the title
 [0pt]  % `right-sep`: Right margin (affected by `hang`, `block`, and `display`)
 % Sub-Section Formatting
 \titleformat{\subsection}
@@ -107,12 +107,14 @@
     { \Huge #1 \textsc{#2} }\\
 }
 \newcommand{\contactseparator}{
-    \hspace{\spacesmall}\textbar\hspace{\spacesmall}
+    \hspace{3pt}\textbar\hspace{3pt}
 }
 \newcommand{\email}[1]{\faIcon{envelope} \href{mailto:#1}{#1}}
 \newcommand{\phone}[1]{\faIcon{phone-alt} \href{tel:+1-#1}{#1}}
-\newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{github.com/#1}}
-\newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{linkedin.com/in/#1}}
+\newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{#1}}
+\newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{#1}}
+\newcommand{\website}[1]{\faIcon{globe} \href{https://#1}{#1}}
+\newcommand{\twitter}[1]{{\color{black}\faIcon{twitter} \href{https://x.com/#1}{@#1}}}
 \newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
 
 % Experience/Achievements
@@ -122,14 +124,15 @@
 \newcommand{\tech}[1]{{\color{Brown}\textbf{#1}}}
 \newcommand{\tenure}[1]{\textbf{#1}}
 \newcommand{\achievement}[1]{%
+    \vspace{2pt}
     \begin{itemize}
         \item #1
     \end{itemize}
-    \vspace{\spacesmall}
 }
 \newcommand{\degree}[4]{%
-    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
-    #4
+    \noindent\textbf{#1} \hfill \tenure{#3}\\
+    \noindent#2 \hfill \textbf{#4}
+    \vspace{\spacesmall}
 }
 \newcommand{\award}[4]{%
     \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
@@ -140,18 +143,25 @@
     #3
     \vspace{\spacesmall}
 }
+\newcommand{\skill}[2]{%
+    \noindent\textbf{#1}: #2
+    \vspace{3pt}
+}
 \newcommand{\role}[3]{%
-    \noindent\roletitle{#1} \hfill \tenure{#2}\vspace{\spacesmall}\par
+    \noindent\textbf{#1} \hfill \tenure{#2}\vspace{\spacesmall}\par
     #3
 }
 \newcommand{\experience}[2]{%
-    \noindent\textsc{#1}\dotfill
+    #2
 
     \vspace{\spacesmall}
-
-    \noindent#2
-
-    \vspace{\spacesmall}
+}
+\newcommand{\experienceline}[3]{%
+    \vspace{6pt}
+    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \tenure{#3}\vspace{2pt}\par
+}
+\newcommand{\firstexperienceline}[3]{%
+    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \tenure{#3}\vspace{2pt}\par
 }
 
 %% ----- Four Required Configurations -----
