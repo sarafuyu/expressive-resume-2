@@ -156,12 +156,12 @@
 
     \vspace{\spacesmall}
 }
-\newcommand{\experienceline}[3]{%
+\newcommand{\experienceline}[4]{%
     \vspace{6pt}
-    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \tenure{#3}\vspace{2pt}\par
+    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \textit{#3} \textbf{|} \tenure{#4}\vspace{2pt}\par
 }
-\newcommand{\firstexperienceline}[3]{%
-    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \tenure{#3}\vspace{2pt}\par
+\newcommand{\firstexperienceline}[4]{%
+    \noindent\textbf{#1} \textbf{---} \textbf{#2} \hfill \textit{#3} \textbf{|} \tenure{#4}\vspace{2pt}\par
 }
 
 %% ----- Four Required Configurations -----
