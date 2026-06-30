@@ -11,7 +11,7 @@
 
 %% ----- Required Packages -----
 %% Define page layout
-\RequirePackage[margin=0.5in]{geometry}
+\RequirePackage[margin=0.42in]{geometry}
     \pagestyle{empty}
 
 %% ----- Custom Commands -----
@@ -110,6 +110,6 @@
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont}
-\setlength{\textwidth}{7.5in}
-\setlength{\textheight}{10in}
+\setlength{\textwidth}{7.66in}
+\setlength{\textheight}{10.16in}
 \pagenumbering{arabic}
