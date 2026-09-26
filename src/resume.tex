@@ -5,17 +5,17 @@
 \usepackage{tabularx}
 \usepackage{needspace}
 \geometry{a4paper,margin=0.5in}
-\renewcommand{\normalsize}{\fontsize{10.5pt}{12pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{10.5pt}{11.8pt}\selectfont}
 \setlength{\parindent}{0pt}
 \setlength{\emergencystretch}{2em}
 \setlist[itemize]{leftmargin=14pt,topsep=0pt,itemsep=0pt,parsep=0pt}
-\titlespacing{\section}{0pt}{6pt}{4pt}
+\titlespacing{\section}{0pt}{4pt}{3pt}
 \titleformat{\section}{\color{blue}\large\scshape\raggedright}{}{0em}{}[\titlerule]
 \hypersetup{pdftitle={Sara Rydell - Resume},pdfauthor={Sara Rydell}}
 
 % Compact headings and bullets retain the Expressive Resume typography.
 \newcommand{\resumeentry}[3]{%
-    \par\addvspace{4pt}\Needspace{3\baselineskip}%
+    \par\addvspace{3pt}\Needspace{3\baselineskip}%
     \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
         \textbf{#1 --- #2} & {\small #3}
     \end{tabularx}\par
@@ -27,42 +27,53 @@
 \begin{document}
 
 % ----- Name, current title, and a single line of public contact links -----
-{\Huge Sara \textsc{Rydell}}\hfill{\large IT Product Architect at Ericsson}\par
-\vspace{5pt}
+{\Huge Sara \textsc{Rydell}}\par
+\vspace{2pt}
+{\large IT Product Architect at Ericsson}\par
+\vspace{3pt}
+\href{mailto:sara.hanfuyu@gmail.com}{\faIcon{envelope} Email}
+\contactseparator
 \href{https://www.linkedin.com/in/sara-rydell-290428146/}{\faIcon{linkedin} LinkedIn}
 \contactseparator
-\href{https://github.com/sarafuyu/}{\faIcon{github} github.com/sarafuyu}
+\href{https://github.com/sarafuyu/}{\faIcon{github} GitHub}
 \contactseparator
 \href{https://www.sararydell.com/}{\faIcon{globe} sararydell.com}
 \par\vspace{2pt}
+
+% ----- Education -----
+\section{Education}
+\textbf{KTH Royal Institute of Technology} --- B.Sc. in Computer Science
+\hfill Sep. 2021 -- Jun. 2024\\
+Coursework: Algorithms, Data Structures, Databases, Mathematics,
+Computer Architecture, Machine Learning.
 
 % ----- Professional experience -----
 \section{Professional Experience}
 
 \resumeentry{Ericsson}{IT Product Architect}{Jul. 2025 -- Present}
-\achievement{Drive alignment between enterprise IT strategy and product execution
-across \tech{Azure} platforms, shaping roadmap direction, prioritization, and
-architectural governance.}
-\achievement{Review solutions and change requests to balance delivery speed with
-long-term scalability and platform integrity.}
-\achievement{Bridge enterprise IT, product owners, and engineering teams to clarify
-strategic initiatives; contribute architectural input to roadmap and funding decisions.}
-\achievement{Co-spokesperson for an enterprise observability initiative, supporting
-communication and adoption across business and delivery teams.}
-\achievement{Build automation with \tech{RPA} and \tech{Microsoft Power Platform}
-to improve internal efficiency.}
+\achievement{Shape architecture and delivery across \textbf{3 products}, including
+an \tech{Azure PaaS} platform using \tech{PHP/Laravel}; support software-focused
+supply-chain initiatives.}
+\achievement{Align enterprise IT strategy with roadmaps, prioritization, and funding;
+review solutions and change requests for architectural governance, scalability,
+and platform integrity.}
+\achievement{Support cost initiatives delivering approximately \textbf{33--50\% savings per initiative}
+through cloud cost management, team restructuring, consultant transitions, and resource allocation.}
+\achievement{Coordinate enterprise IT, product owners, and engineering teams on delivery and database migration.}
+\achievement{Co-spokesperson for enterprise observability, supporting adoption
+across business and delivery teams.}
+\achievement{Build \tech{RPA} and \tech{Microsoft Power Platform} automation to improve internal efficiency.}
 
-\resumeentry{Ericsson}{IT Trainee --- 3 Rotations}{Aug. 2024 -- Jun. 2025}
+\resumeentry{Ericsson}{IT Trainee}{Aug. 2024 -- Jun. 2025}
 \achievement{\textbf{Data Science:} Contributed to \textbf{2 GenAI proofs of concept}
 for Supply and CSR support systems.}
 \achievement{\textbf{Cloud Engineering:} Worked on Azure automation pipelines
 and \tech{FinOps} analysis.}
-\achievement{\textbf{Business Operations:} Supported change management, standards,
-and communications for the Internal Steering Group.}
+\achievement{\textbf{Business Operations:} Supported steering group standards, communication, and change management.}
 
 % Pharus roles retained; board tenure follows the dates in the LinkedIn export.
 \resumeentry{Pharus Tech AB}{Board Member}{Jul. 2020 -- Apr. 2025}
-\achievement{Served \textbf{nearly 5 years} on the board; recognized at election
+\achievement{Served \textbf{5 years} on the board; recognized at election
 as Sweden's youngest company board member.}
 \resumeentry{Pharus Tech AB}{IT Architecture Consultant}{Jul. -- Aug. 2020}
 \achievement{Analyzed \tech{ESCO} data across \textbf{3,008 occupations} and \textbf{13,890 skills}
@@ -74,18 +85,12 @@ algorithms and contributed to UX design and product testing.}
 through labs, exercise sessions, coding guidance, and assessment and grading of
 \tech{Python} and \tech{SQL} assignments.}
 
-% ----- Education -----
-\section{Education}
-\textbf{KTH Royal Institute of Technology} --- B.Sc. in Computer Science
-\hfill Sep. 2021 -- Jun. 2024\\
-Coursework: Algorithms, Data Structures, Databases, Mathematics,
-Computer Architecture, Machine Learning.
-
 % ----- Publications -----
 \section{Publications}
-\textbf{\href{https://arxiv.org/abs/2411.19799}{INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge}}\\
-Romanou, \textbf{Rydell}, et al. \hfill Nov. 2024
-\par\vspace{3pt}
+\textbf{\href{https://proceedings.iclr.cc/paper_files/paper/2025/hash/ced46a50befedcb884ccf0cbe8c3ad23-Abstract-Conference.html}{INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge}}\\
+Angelika Romanou, \ldots, \textbf{Sara Rydell}, \ldots, Antoine Bosselut.
+\hfill \textbf{ICLR 2025 (Spotlight)}
+\par\vspace{2pt}
 \textbf{\href{https://kth-my.sharepoint.com/:b:/g/personal/sryde_ug_kth_se/ET3Dv7v4t0NFoMeeCFlWsocB7MEQH2LLglb5x2O56XQChg?e=Xzcd7b}{Support Vector Machines for High-dimensional and Incomplete Datasets with Few Entries}}\\
 \textbf{Rydell}, Hopkins, Al-Khalili Szigyarto, Conradt. \hfill Aug. 2024
 
@@ -93,10 +98,10 @@ Romanou, \textbf{Rydell}, et al. \hfill Nov. 2024
 \section{Honors and Awards}
 \textbf{SEB Tech Talent of the Year --- Top 8 Finalist} \hfill Feb. 2023\\
 Analyzed financial and socio-demographic data for SEB Greentech Venture Capital's potential investments.
-\par\vspace{3pt}
+\par\vspace{2pt}
 \textbf{Young Innovation in Times of Crisis --- IVA} \hfill May 2020\\
 Awarded for \textbf{United in Crisis}, addressing pandemic-related unemployment and healthcare resource shortages.
-\par\vspace{3pt}
+\par\vspace{2pt}
 \textbf{Winner, Intelligent Homes \& Health Challenge --- NYAS} \hfill Feb. 2020\\
 Led \textbf{Health Sync} to \textbf{1st place} with home health monitoring; invited to the Global Alliance Summit.
 
@@ -113,10 +118,10 @@ strengthened partnerships and shared knowledge to support the board and event te
 \section{Technical Skills}
 \textbf{Architecture \& cloud:} Azure, IT strategy, architectural governance, roadmap alignment, FinOps, DevSecOps.\\[1pt]
 \textbf{Automation \& data:} Microsoft Power Platform, RPA, Power BI, generative AI, scikit-learn.\\[1pt]
-\textbf{Programming:} Python, SQL, Java, C, PowerShell, MATLAB, HTML/CSS/JavaScript, Go, Assembly.\\[1pt]
+\textbf{Programming:} Python, SQL, PHP/Laravel, Java/C, PowerShell, MATLAB, HTML/CSS/JS, Go, Assembly.\\[1pt]
 \textbf{Agentic AI:} Codex, Claude Code, Model Context Protocol (MCP), agent orchestration.
 
-\par\vspace{6pt}
-\textbf{Languages:} Swedish (native/bilingual), English (full professional), Chinese (elementary).
+\section{Languages}
+Swedish (native/bilingual), English (full professional), Chinese (elementary).
 
 \end{document}
