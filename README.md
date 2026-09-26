@@ -2,7 +2,7 @@
 
 Sara's resume using [Expressive Resume 2](https://github.com/serhanylmz/expressive-resume-2),
 based on [Joseph Hale's Expressive Resume](https://github.com/thehale/expressive-resume).
-The resume has no about or summary section.
+The resume is one page, with no about or summary section.
 
 - [Latest PDF](src/resume.pdf)
 - [Editable LaTeX source](src/resume.tex)
@@ -35,8 +35,11 @@ The original template classes and MIT license are retained.
 ## Content
 
 Updated from Sara's supplied resume and LinkedIn export on 26 September 2026.
-This public version omits Sara's phone number and email address. The ICT Consultant
-entry has no responsibilities because the supplied profile does not describe
-that role separately.
+This public version omits Sara's phone number, email address, and location.
+Ericsson is presented as a progression from IT Trainee (August 2024 to June 2025)
+to IT Product Architect (July 2025 onward), following Sara's clarification that
+the intermediate ICT Consultant title was a formality. The agentic AI skills
+were confirmed by Sara. Earlier school, tutoring, junior memberships,
+introductory training, and career programs are omitted for a focused one-page CV.
 
 The original template's example cover letter and images remain as examples.
