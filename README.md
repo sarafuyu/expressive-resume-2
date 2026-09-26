@@ -41,5 +41,7 @@ to IT Product Architect (July 2025 onward), following Sara's clarification that
 the intermediate ICT Consultant title was a formality. The agentic AI skills
 were confirmed by Sara. Earlier school, tutoring, junior memberships,
 introductory training, and career programs are omitted for a focused one-page CV.
+Quantified details use the supplied CV and profile: trainee rotations and PoCs,
+board tenure, ESCO dataset size, teaching courses, network membership, and award rankings.
 
 The original template's example cover letter and images remain as examples.
