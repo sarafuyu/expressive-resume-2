@@ -2,7 +2,9 @@
 
 Sara's resume using [Expressive Resume 2](https://github.com/serhanylmz/expressive-resume-2),
 based on [Joseph Hale's Expressive Resume](https://github.com/thehale/expressive-resume).
-The resume is one page, with no about or summary section.
+The resume is one page, with separate Ericsson Product Architect and IT Trainee
+entries, a dedicated leadership section for Malvina, and Agentic AI under
+Technical Skills. It has no about or summary section.
 
 - [Latest PDF](src/resume.pdf)
 - [Editable LaTeX source](src/resume.tex)
