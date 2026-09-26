@@ -1,76 +1,174 @@
-\RequirePackage{etex}
 \documentclass{ExpressiveResume}
 
-% ----- Resume -----
+% Personal layout settings; keep the upstream template classes reusable.
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{needspace}
+\geometry{a4paper,margin=0.5in}
+\renewcommand{\normalsize}{\fontsize{10.5pt}{12.5pt}\selectfont}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=15pt,topsep=0pt,itemsep=0pt,parsep=0pt}
+\titlespacing{\section}{0pt}{8pt}{5pt}
+\hypersetup{pdftitle={Sara Rydell - Resume},pdfauthor={Sara Rydell}}
+
+\renewcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://www.linkedin.com/in/#1/}{LinkedIn}}
+\renewcommand{\nametitle}[2]{%
+    {\Huge #1 \textsc{#2}}\\[3pt]
+    {\large IT Product Architect at Ericsson}\\
+}
+
+% Allow long employers and role names to wrap without colliding with dates.
+\newcommand{\resumeentry}[4]{%
+    \par\addvspace{6pt}\Needspace{4\baselineskip}%
+    \noindent\begin{tabularx}{\linewidth}{@{}X r@{}}
+        \textbf{#1 --- #2} & {\small\textit{#3} \textbf{|} #4}
+    \end{tabularx}\par\vspace{1pt}%
+}
+\renewcommand{\firstexperienceline}[4]{\resumeentry{#1}{#2}{#3}{#4}}
+\renewcommand{\experienceline}[4]{\resumeentry{#1}{#2}{#3}{#4}}
+
 \begin{document}
 
-% ----- Name + Contact Information -----
+% ----- Public profile links; no phone, email, or about/summary section -----
 \resumeheader[
-    firstname=Serhan,
-    lastname=Yilmaz,
-    email=srhnylmz14@gmail.com,
-    linkedin=yilmaz-serhan,
-    github=serhanylmz,
-    website=serhanyilmaz.org,
-    twitter=srhnylmz14
+    firstname=Sara,
+    lastname=Rydell,
+    github=sarafuyu,
+    linkedin=sara-rydell-290428146,
+    website=www.sararydell.com,
+    city=Stockholm,
+    state=Sweden
 ]
+\par\vspace{2pt}
 
-% ----- Experience -----
-\section{Experience}
+% ----- Professional Experience -----
+\section{Professional Experience}
 
-\firstexperienceline{Magnos}{Co-Founder}{New York, NY}{2026 - Present}
-\achievement{AI Operating System that unifies operational and financial data with company context into a real-time operating model, and deploys AI agents to automate reporting, planning, and analysis so leadership teams can make faster, smarter decisions}
-\achievement{Raised \tech{\$3.2M} from notable Silicon Valley-based investors}
+\firstexperienceline{Ericsson}{IT Product Architect}{Stockholm}{Jan. 2026 -- Present}
+\achievement{Align enterprise IT strategy with product execution for \tech{Azure}
+platforms, contributing to roadmaps, prioritization, and architectural governance.}
+\achievement{Review solutions and change requests for scalability and platform
+integrity; connect enterprise IT, product owners, and engineering teams in roadmap
+and funding discussions.}
+\achievement{Serve as co-spokesperson for an enterprise observability initiative,
+supporting communication and adoption across business and delivery teams.}
+\achievement{Build automation with \tech{RPA} and \tech{Microsoft Power Platform}
+to improve internal efficiency.}
 
-\experienceline{kAi Sabanci}{Founder, President}{Istanbul, Turkey}{2023 - 2025}
-\achievement{Founded and scaled Sabanci University's AI club into a \tech{600+} member organization, secured founding-member status in the \tech{NVIDIA Student Network}, and led technical and partnership initiatives}
+\experienceline{Ericsson}{ICT Consultant}{Stockholm}{Jun. 2025 -- Dec. 2025}
+% LinkedIn lists this role without a separate description.
 
-\experienceline{Carnegie Mellon University}{Researcher}{Pittsburgh, PA}{2023 - 2025}
-\achievement{Researched question generation and multi-agent AI systems, developing structured LLM workflows and evaluation methods that improved generation quality by over \tech{60\%} versus baselines}
+\experienceline{Ericsson}{IT Trainee}{Stockholm}{Aug. 2024 -- Jun. 2025}
+\achievement{Contributed as a data scientist to two \tech{generative AI}
+proofs of concept for Supply and CSR support systems.}
+\achievement{Worked on Azure automation pipelines and \tech{FinOps} analysis
+during a cloud engineering rotation.}
+\achievement{Supported business operations change management, including standards
+and communications for the Internal Steering Group.}
 
-\experienceline{KTH Royal Institute of Technology}{Researcher}{Stockholm, Sweden}{2024 - 2024}
-\achievement{Developed conversational AI systems for turn-taking, combining inference optimization, audio augmentation, and deployment on Furhat humanoid robots to improve real-world interaction quality}
+\experienceline{Pharus Tech AB}{Board Member}{Stockholm}{Jul. 2020 -- Apr. 2025}
+\achievement{Elected to the company board in 2020 and recognized at the time as
+Sweden's youngest company board member.}
 
-\experienceline{Technische Universit\"at Darmstadt}{Researcher}{Darmstadt, Germany}{2024 - 2024}
-\achievement{Developed a culturally sensitive agentic AI system for psychological assessment of Ukrainian refugees, integrating autonomous reasoning and deployment-grade optimization for clinical use at Charite Berlin}
+\experienceline{Pharus Tech AB}{IT Architecture Consultant}{Stockholm}{Jul. -- Aug. 2020}
+\achievement{Analyzed the \tech{ESCO} dataset of 3,008 occupations and 13,890 skills
+to develop user interface design guidelines; led a team building algorithms to
+match skills with job profiles, contributing to UX design and product testing.}
 
-\experienceline{Cohere}{Researcher}{Remote}{2024 - 2024}
-\achievement{Co-authored INCLUDE, an ICLR 2025 \tech{Spotlight} multilingual language understanding benchmark, and contributed to Project Aya by building LLM- and VLM-powered data pipelines to extract and curate evaluation data across diverse languages}
+\experienceline{KTH Royal Institute of Technology}{Teaching Assistant}{Stockholm}{Sep. 2023 -- Feb. 2024}
+\achievement{Led labs and exercise sessions in \tech{Python} and \tech{SQL},
+supported students with coding assignments, and assessed and graded submissions
+in Python Programming and Database Technology.}
 
-\experienceline{Yap{\i} Kredi Teknoloji}{NLP Engineer}{Istanbul, Turkey}{2023 - 2024}
-\achievement{Improved document understanding systems with OCR-free transformer models and reduced annotation effort through transfer learning-based language model fine-tuning}
-
-\experienceline{EPFL}{Researcher}{Lausanne, Switzerland}{2023 - 2023}
-\achievement{Built privacy-preserving federated ML infra, combining CUDA-accelerated optimization, benchmarking systems, and robust distributed training tools to significantly improve performance and efficiency}
-
-\experienceline{Boston University}{Researcher}{Boston, MA}{2022 - 2022}
-\achievement{Researched secure server architecture for resource-intensive systems and developed a \tech{C++} design tool to explore large-scale configuration tradeoffs}
-
-\experienceline{Pharus Tech}{Product Advisor}{Stockholm, Sweden}{2020 - 2020}
-\achievement{Advised on product direction and data workflows for labor market intelligence tools, supporting the development of skill-survey systems}
-
-% ----- Publications -----
-\section{Publications}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=25pt, itemsep=5pt]
-    \item Angelika Romanou, [...], \textbf{Serhan Yilmaz}, [...] Sara Hooker,
-          Antoine Bosselut, "INCLUDE: Evaluating Multilingual Language
-          Understanding with Regional Knowledge," \textbf{ICLR 2025 - Spotlight}.
-\end{enumerate}
-
-% ----- Awards -----
-\section{Awards}
-
-\award{Sakip Sabanci Award for Outstanding Success (2x)}{Sabanci University}{Sep 2022}{}
-
-\award{Innovation in Crisis Award}{The Royal Swedish Academy of Engineering Sciences}{May 2020}{}
-
-\award{Junior Academy Membership}{The New York Academy of Sciences}{Sep 2019}{}
+\experienceline{My Academy}{Study Coach}{Stockholm}{Apr. 2022 -- Sep. 2023}
+\achievement{Tutored high school students in mathematics, adapting study approaches
+to individual learning needs and helping students build confidence.}
 
 % ----- Education -----
 \section{Education}
+\textbf{KTH Royal Institute of Technology} \hfill \textbf{Sep. 2021 -- Jun. 2024}\\
+Bachelor of Science in Computer Science\\
+Coursework: Algorithms, Data Structures, Databases, Mathematics,
+Computer Architecture, and Machine Learning.
+\par\vspace{4pt}
+\textbf{Anna Whitlocks gymnasium} \hfill \textbf{2018 -- 2021}\\
+High School Diploma, Natural Sciences Programme.
 
-\noindent\textbf{Sabanci University} \hfill \textbf{B.S. in Computer Science}
-\vspace{\spacesmall}
+% ----- Skills -----
+\section{Technical Skills}
+\textbf{Architecture and cloud:} Azure, architectural governance, IT strategy,
+roadmap alignment, FinOps, DevSecOps, security.\\[2pt]
+\textbf{Automation and data:} Microsoft Power Platform, RPA, Power BI,
+generative AI, scikit-learn.\\[2pt]
+\textbf{Programming:} Python, SQL, Java, C, PowerShell, MATLAB,
+HTML/CSS/JavaScript, Go, Assembly.
+
+\newpage
+
+% ----- Research -----
+\section{Publications and Research Contributions}
+\textbf{\href{https://arxiv.org/abs/2411.19799}{INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge}}\\
+Angelika Romanou et al. \textit{Data contributor.} \hfill Nov. 2024\\
+EPFL, Cohere For AI, ETH Zurich, Swiss AI Initiative.
+\par\vspace{5pt}
+\textbf{\href{https://kth-my.sharepoint.com/:b:/g/personal/sryde_ug_kth_se/ET3Dv7v4t0NFoMeeCFlWsocB7MEQH2LLglb5x2O56XQChg?e=Xzcd7b}{Support Vector Machines for High-dimensional and Incomplete Datasets with Few Entries}}\\
+\textbf{Sara Rydell}, Noah Hopkins, Cristina Al-Khalili Szigyarto,
+J\"org Conradt. \hfill Aug. 2024\\
+KTH Royal Institute of Technology.
+
+% ----- Honors -----
+\section{Honors and Awards}
+\textbf{Tech Talent of the Year 2023 -- Top Eight Finalist, SEB} \hfill \textbf{Feb. 2023}
+\achievement{Analyzed financial and socio-demographic data to identify critical
+success factors for SEB Greentech Venture Capital's potential investments.}
+\par\vspace{5pt}
+\textbf{Young Innovation in Times of Crisis (Ung innovation i kristid)} \hfill \textbf{May 2020}\\
+Royal Swedish Academy of Engineering Sciences (IVA)
+\achievement{Awarded for \textbf{United in Crisis}, developed for the NYAS Junior
+Academy's Combating COVID-19 challenge to address pandemic-related unemployment
+and healthcare resource shortages.}
+\par\vspace{5pt}
+\textbf{Winner, Intelligent Homes \& Health Challenge} \hfill \textbf{Feb. 2020}\\
+The New York Academy of Sciences (NYAS)
+\achievement{Won first prize with \textbf{Health Sync}, integrating health
+monitoring into home environments; received a travel stipend and an invitation
+to the Global Alliance Summit 2020.}
+
+% ----- Leadership and volunteering -----
+\section{Leadership and Volunteer Experience}
+\firstexperienceline{Malvina KTH}{Head of Business Events; Board Member}{Stockholm}{May 2023 -- Jun. 2024}
+\achievement{Led the business events division and contributed to board decisions
+and organizational development for KTH's network for female and non-binary students.}
+\achievement{Organized networking events with Google, Accenture, and ABB;
+shared knowledge and strengthened corporate partnerships.}
+
+\experienceline{Malvina KTH}{Business Events Group Member}{Stockholm}{Jun. 2022 -- May 2023}
+\achievement{Managed corporate relationships and coordinated event logistics,
+including an event with Sopra Steria. Malvina member from Aug. 2021 to Jun. 2025.}
+
+\experienceline{NYAS}{Junior Academy Member}{Remote}{Sep. 2019 -- Sep. 2021}
+\achievement{Led multinational teams in the Intelligent Homes \& Health Challenge
+(Sep.--Dec. 2019) and the Combating COVID-19 Challenge (Mar.--May 2020),
+earning the awards listed above.}
+
+\experienceline{Ung Omsorg}{Participant}{Stockholm}{Sep. 2017 -- Sep. 2018}
+\achievement{Provided companionship and social activities for older adults in nursing homes.}
+
+% ----- Career development -----
+\section{Career Programs}
+\textbf{BCG Platinion} -- Women in Digital Mentorship Program \hfill Feb. -- Jun. 2024\\[2pt]
+\textbf{Schibsted} -- Schibsted Connect Participant \hfill Nov. 2023 -- Jun. 2024\\[2pt]
+\textbf{McKinsey \& Company} -- Building the Future of Tech \hfill Nov. 2023
+
+\section{Certifications and Training}
+Fundamentals of the Generative AI Playground 2025;
+Agile Bootcamp -- Software Engineering Chapter;
+Accenture Nordics -- Consultant Job Simulation; 5 Day Coding Challenge.\\[2pt]
+\textbf{Membership credential:} Young Member of the New York Academy of Sciences.
+
+\section{Languages}
+\textbf{Swedish:} Native or bilingual; \textbf{English:} Full professional;\\[2pt]
+\textbf{Spanish, Turkish, Chinese:} Elementary proficiency.
 
 \end{document}

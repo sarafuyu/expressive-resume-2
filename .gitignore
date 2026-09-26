@@ -273,3 +273,6 @@ TSWLatexianTemp*
 *.glstex
 
 # End of https://www.gitignore.io/api/latex
+# Local compiler package cache and operating-system metadata
+.cache/
+.DS_Store
